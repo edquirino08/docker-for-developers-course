@@ -1,0 +1,24 @@
+{
+  "name": "docker-for-developers-course",
+  "version": "1.0.0",
+  "description": "Companion project for the Docker for Developers course. Includes practical exercises with Docker, Docker Swarm, and Kubernetes.",
+  "homepage": "https://github.com/edquirino08/docker-for-developers-course#readme",
+  "bugs": {
+    "url": "https://github.com/edquirino08/docker-for-developers-course/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edquirino08/docker-for-developers-course.git"
+  },
+  "license": "ISC",
+  "author": "Eduardo Quirino",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
