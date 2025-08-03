@@ -48,6 +48,10 @@ Companion project for the Docker for Developers course. Includes practical exerc
 - docker run -v <volume-name>:/path <image-name> - mount a named volume to a container.
 - docker run -d -p <host-port>:<container-port> --name <name> -v <volume-name>:/<path> <image-name> - run a container with a named volume.
 - docker volume create <volume-name> - create a new Docker volume.
+- docker volume inspect <volume-name> - view detailed information about a Docker volume.
+- docker volume rm <volume-name> - remove a Docker volume.
+- docker volume prune - remove all unused Docker volumes.
+- docker run -v <volume-name>:/<path>:ro <image-name> - mount a named volume in read-only mode.
 
 ## Bind Mounts
 - docker run -d -p <host-port>:<container-port> --name <name> -v /path:/<path> <image-name> - Persists data in a specific directory on the host machine.
