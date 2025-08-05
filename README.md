@@ -56,3 +56,10 @@ Companion project for the Docker for Developers course. Includes practical exerc
 ## Bind Mounts
 - docker run -d -p <host-port>:<container-port> --name <name> -v /path:/<path> <image-name> - Persists data in a specific directory on the host machine.
 - docker run -d -p <host-port>:<container-port> --name <name -v <project-directory>:/<docker-directory> <image-name> - Mounts a project directory from the host machine to the container. Is useful for development purposes, because changes made in the host directory are reflected in the container.
+
+## Networks
+- docker network ls - list all Docker networks.
+- docker network create <network-name> - create a new Docker network (defualt bridge driver).
+- docker network create -d <driver-name> <network-name> - create a new Docker network with a specific driver (e.g., overlay, bridge, host).
+- docker network rm <network-name> - remove a Docker network.
+- docker network prune - remove all unused Docker networks.
