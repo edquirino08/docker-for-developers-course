@@ -63,6 +63,7 @@ Companion project for the Docker for Developers course. Includes practical exerc
 - docker network create -d <driver-name> <network-name> - create a new Docker network with a specific driver (e.g., overlay, bridge, host).
 - docker network rm <network-name> - remove a Docker network.
 - docker network prune - remove all unused Docker networks.
+- docker network inspect <network-name> - view detailed information about a Docker network.
 
 ## Connecting Containers
 Example of connecting a Flask app container to a PostgreSQL container:
@@ -81,3 +82,7 @@ Example of connecting a Flask app container to a PostgreSQL container:
 4. Remember that the host will be the name of the PostgreSQL container (`flaskpostgres_container` in this case) when connecting from the Flask app to the PostgreSQL database.
 
 5. Access the Flask app at `http://localhost:5001`.
+
+## Connecting container to a network
+- docker network connect <network-name> <container-name> - connect a running container to a network.
+- docker network disconnect <network-name> <container-name> - disconnect a running container from a network.
