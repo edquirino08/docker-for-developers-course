@@ -1,0 +1,50 @@
+# To declare a value in YAML, use the format:
+# key: value
+# Remember to use spaces after the two dots and before the value.
+name: "Eduardo Quirino"
+age: 24
+
+# To declare a object in YAML, use the format:
+# key:
+#   subkey: value
+# Remember to use spaces for indentation.
+address:
+  street: "Rua Exemplo"
+  number: 123
+object:
+  version: 2
+  file: "test.yaml"
+
+# To declare number values in YAML, use the format:
+number: 3.14
+
+# To declare stirng values in YAML, use the format:
+string: WITH NO SEMICOLON
+string_with_semicolon: "WITH SEMICOLON"
+
+
+# To declare null values in YAML, use the format:
+null_value: null
+null: ˜
+
+# To declare boolean values in YAML, use the format:
+boolean_true: True
+boolean_false: False
+boolean_false_off: off
+boolean_true_on: on
+
+# To declare a list in YAML, use the format:
+# - item1
+# - item2
+list:
+  - item1
+  - item2
+  - item3
+list_2: [
+  item1,
+  item2,
+  item3
+]
+
+# To declare a nested dictionary in YAML, use the format:
+obj : {1: "one", 2: "two", 3: "three"}
