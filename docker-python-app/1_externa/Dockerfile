@@ -1,12 +1,12 @@
 FROM python:3
 
 RUN apt-get update -y && \
-    apt-get install -y python3-dev
+    apt-get install -y python3-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-RUN pip install Flask
-RUN pip install requests
+RUN pip install Flask requests
 
 COPY . .
 
