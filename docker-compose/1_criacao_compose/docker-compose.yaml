@@ -17,7 +17,7 @@ services:
       - db
     image: wordpress:latest
     ports:
-      - "8000:80"
+      - "800:80"
     restart: always
     environment:
       TZ: America/Sao_Paulo

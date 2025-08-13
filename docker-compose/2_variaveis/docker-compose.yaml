@@ -2,7 +2,7 @@ services:
   db:
     image: mysql:latest
     volumes:
-      - db_data:/var/lib/mysql
+      - 1_criacao_compose_db_data:/var/lib/mysql
     restart: always
     env_file:
       - ./config/db.env
@@ -13,16 +13,10 @@ services:
     image: wordpress:latest
     restart: always
     ports:
-      - "8000:80"
-    environment:
-      TZ: America/Sao_Paulo
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_NAME: wordpress
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: docker
+      - "800:80"
+    env_file:
+      - ./config/wp.env
 
 volumes:
-  db_data: {}
-
-
-## TODO -- descobrir o erro de por que não estar rodando.
+  1_criacao_compose_db_data:
+    external: true
