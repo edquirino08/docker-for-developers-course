@@ -86,3 +86,10 @@ Example of connecting a Flask app container to a PostgreSQL container:
 ## Connecting container to a network
 - docker network connect <network-name> <container-name> - connect a running container to a network.
 - docker network disconnect <network-name> <container-name> - disconnect a running container from a network.
+
+## Docker Compose
+- docker-compose up - start services defined in a `docker-compose.yml` file.
+- docker-compose up -d - start services defined in a `docker-compose.yml` file in detached mode.
+- docker-compose down - stop and remove services defined in a `docker-compose.yml` file.
+- docker-compose ps - list services defined in a `docker-compose.yml` file.
+- docker-compose logs - view logs of services defined in a `docker-compose.yml` file.`
