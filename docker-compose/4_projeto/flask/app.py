@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config["DEBUG"] = True
 
 DB_CONFIG = {
-    "host": "flaskpostgres_container", // same name of the postgres container
+    "host": "db", 
     "database": "flaskdocker",
     "user": "postgres",
     "password": "postgres"
@@ -34,4 +34,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)
