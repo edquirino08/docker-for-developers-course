@@ -1,0 +1,23 @@
+services:
+  db: 
+    build: ./postgres/
+    restart: always
+    env_file:
+      - ./config/db.env
+    ports:
+      - "5434:5432"
+    networks:
+      - dockercompose
+
+  backend:
+    depends_on:
+      - db
+    build: ./flask/
+    ports:
+      - "5001:5001"
+    restart: always
+    networks:
+      - dockercompose
+
+networks:
+  dockercompose:

@@ -1,0 +1,25 @@
+services:
+  db: 
+    build: ./postgres/
+    restart: always
+    env_file:
+      - ./config/db.env
+    ports:
+      - "5434:5432"
+    networks:
+      - dockercompose
+
+  backend:
+    depends_on:
+      - db
+    build: ./flask/
+    ports:
+      - "5001:5001"
+    restart: always
+    volumes: 
+      -  /Users/eduardoquirino/Documents/dev/repositories/docker-for-developers-course/docker-compose/6_bind_mount_compose/flask:/app # atualizado em tmepo real, sem precisar buildar novamente
+    networks:
+      - dockercompose
+
+networks:
+  dockercompose:

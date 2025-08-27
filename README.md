@@ -93,3 +93,12 @@ Example of connecting a Flask app container to a PostgreSQL container:
 - docker-compose down - stop and remove services defined in a `docker-compose.yml` file.
 - docker-compose ps - list services defined in a `docker-compose.yml` file.
 - docker-compose logs - view logs of services defined in a `docker-compose.yml` file.`
+- docker-compose build - build or rebuild services defined in a `docker-compose.yml` file.
+- docker compose up --build - build images before starting containers.
+- docker compose down --volumes - remove named volumes declared in the `volumes` section of the `docker-compose.yml` file and anonymous volumes attached to containers.
+- docker-compose exec <service-name> <command> - execute a command inside a running service container.
+- docker-compose stop <service-name> - stop a running service container.
+- docker-compose start <service-name> - start a stopped service container.
+- docker-compose restart <service-name> - restart a running service container.
+- docker-compose rm <service-name> - remove a stopped service container.
+- docker compose ps - list containers for a service.
