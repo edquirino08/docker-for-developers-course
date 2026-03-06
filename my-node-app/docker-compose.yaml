@@ -1,20 +1,21 @@
+version: latest
+
 services:
-  mongo-database:
-    image: mongo
+  mongo-db:
+    image: mongo:latest
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-    ports: 
+    ports:
       - 27017:27017
   
   api:
+    depends_on:
+      - mongo-db
     build:
       context: .
       dockerfile: Dockerfile
-    ports: 
-      - 3000
-    depends_on:
-      - mongo-database
-    restart: always 
-    
+    ports:
+      - 3000:3000
+    restart: always
