@@ -102,3 +102,9 @@ Example of connecting a Flask app container to a PostgreSQL container:
 - docker-compose restart <service-name> - restart a running service container.
 - docker-compose rm <service-name> - remove a stopped service container.
 - docker compose ps - list containers for a service.
+
+## Docker Swarm
+- docker swarm init - initialize a new Docker Swarm Node.
+- docker swarm init --advertise-addr <ip-address> - initialize a new Docker Swarm Node with a specific advertise address.
+- docker node ls - list all nodes in the swarm.
+- docker swarm join --token <token> <manager-ip>:<port> - join a node to an existing Docker Swarm.
